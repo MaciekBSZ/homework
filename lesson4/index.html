@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lesson4/css/style.css">
+    <title>Devstock Academy</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-title">
+            <p>Moja strona</p>
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="#aboutus">O Nas</a></li>
+                <li><a href="#form">Formularz</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="header">
+        <h1 class="header-text">Devstock Academy</h1>
+    </header>
+    <section class="articles">
+        <div class="wrapper">
+            <h2 class="articles-title">Lekcja 4</h2>
+            <p class="articles-subtitle">Pierwsze stylowanie strony</p>
+            <p class="article-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, fugiat accusamus.
+                Fugit, ipsam excepturi
+                officiis repudiandae voluptate autem nam id facilis ducimus veritatis. Illo quo architecto id maiores!
+                Doloremque, nemo!</p>
+            <div class="boxes">
+                <!-- normalnie zamiast klasy "box" dałbym klase box-one, box-two, box-three, odwołującą się do każdego boxa z osobna, ale na potrzeby tego zadania darowałem sobie, co by bałaganu w kodzie nie robić -->
+                <div class="box">
+                    <h3 class="box-title">Artykuł</h3>
+                    <p class="box-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptate
+                        laboriosam
+                        voluptatibus, voluptates eius expedita quam hic dolorem fugiat. Iste cupiditate, fuga ipsam
+                        temporibus fugiat ipsum rerum minima repudiandae quod.</p>
+                </div>
+                <div class="box">
+                    <h3 class="box-title">Artykuł</h3>
+                    <p class="box-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptate
+                        laboriosam
+                        voluptatibus, voluptates eius expedita quam hic dolorem fugiat. Iste cupiditate, fuga ipsam
+                        temporibus fugiat ipsum rerum minima repudiandae quod.</p>
+                </div>
+                <div class="box">
+                    <h3 class="box-title">Artykuł</h3>
+                    <p class="box-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptate
+                        laboriosam
+                        voluptatibus, voluptates eius expedita quam hic dolorem fugiat. Iste cupiditate, fuga ipsam
+                        temporibus fugiat ipsum rerum minima repudiandae quod.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-section">
+        <div class="aboutus" id="aboutus">
+            <h2 class="aboutus-title">O nas</h2>
+            <p class="first-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur explicabo
+                dolor ipsam maxime voluptatibus possimus odio quae officia tempora maiores reprehenderit, quod quo id
+                blanditiis eligendi ipsa molestias hic.</p>
+            <p class="second-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ullam praesentium
+                iusto eligendi temporibus? Perspiciatis adipisci distinctio cum. Veniam consectetur voluptates alias
+                quis minima excepturi amet iure vitae quisquam odio.</p>
+        </div>
+        <div class="logo-img">
+            <a href="https://devstock.pl/" target="_blank"><img src="/lesson4/img/DevstockLogo.png" alt="Devstock logo">
+            </a>
+        </div>
+        <div class="form" id="form">
+            <h2 class="form-title">Zaloguj się</h2>
+            <form>
+                <ul>
+                    <li>
+                        <label for="name">Imie i nazwisko</label><br>
+                        <input type="text" placeholder="Your name...">
+                    </li>
+                    <li>
+                        <label for="password">Hasło</label> <br>
+                        <input type="password" placeholder="password">
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <label>Zapamiętaj mnie?</label>
+                    </li>
+                </ul>
+                <button>Wyślij</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
