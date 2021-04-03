@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blueColor: #413fb5;
+    --boxShadow: 0px 0px 7px rgba(100, 96, 106, 0.2);
+    --borderRadius: .7rem;
+    --fontWeight: 700;
+    font-size: 62.5%;
+    font-family: 'system-ui', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-span {
+    font-weight: 600;
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding-bottom: .1em;
+        border-bottom: 2px solid var(--blueColor);
+    }
+}
+
+// HEADER
+.header-logo {
+    padding: 5em 0;
+}
+
+// MAIN
+.main {
+    display: flex;
+    height: 580px;
+    width: 650px;
+    border: 1px solid black;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+}
+
+// MAIN-LEFT SIDE
+.left-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2em;
+
+    &__main-text {
+        font-weight: var(--fontWeight);
+        font-size: 2rem;
+        margin: .7em 0;
+    }
+
+}
+
+// SOCIAL MEDIA REGISTER
+.social-media-register {
+    border: 1px solid var(--blueColor);
+    border-radius: var(--borderRadius);
+    margin: .6em 0;
+
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: .8em;
+        text-decoration: none;
+
+        p {
+            font-weight: var(--fontWeight);
+            font-size: 1.4rem;
+            color: black;
+        }
+    }
+}
+
+// DIVIDER
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0 2.5em;
+    width: 100%;
+
+    &__line {
+        height: 1px;
+        width: 30%;
+        background-color: black;
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-weight: var(--fontWeight);
+    }
+}
+
+// FORM REGISTER
+.form-register {
+    input {
+        width: 100%;
+        border-radius: var(--borderRadius);
+        padding: 1em;
+        margin-bottom: 1.2em;
+        border: 1px solid #edebf0
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            width: 48%;
+        }
+    }
+
+    &__consent {
+        display: flex;
+        margin: .5em;
+
+        input {
+            margin-right: .5em;
+            width: auto;
+        }
+    }
+}
+
+// REGISTER
+.register {
+    padding: 1em 0;
+    margin-bottom: 1.5em;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: var(--fontWeight);
+    border-radius: var(--borderRadius);
+    background-color: var(--blueColor);
+    border: none;
+    cursor: pointer;
+}
+
+.right-side {
+    width: 50%;
+    background-image: url('/lesson7/img/gym.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
