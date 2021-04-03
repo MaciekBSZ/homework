@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trenujemy Online</title>
+    <link rel="stylesheet" href="/lesson7/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-logo">
+            <img src="/lesson7/img/TOLogo.png" class="header-logo__img" alt="Trenujemy Online logo">
+        </header>
+        <main class="main">
+            <div class="left-side">
+                <h2 class="left-side__main-text">Zarejestruj się jako trener</h2>
+                <div class="social-media-register">
+                    <a href="#"> <img src="/lesson7/img/fbIcon.png" alt="facebook logo">
+                        <p>Rejestracja przez Facebook</p>
+                    </a>
+                </div>
+                <div class="social-media-register"> <a href="#">
+                        <img src="/lesson7/img/instaIcon.png" alt="instagram logo">
+                        <p>Rejestracja przez Instagram</p>
+                    </a>
+                </div>
+                <div class="divider">
+                    <div class="divider__line"></div>
+                    <p class="divider__text">Lub za pomocą maila</p>
+                    <div class="divider__line"></div>
+                </div>
+                <form class="form-register" method="POST">
+                    <div class="form-register__row">
+                        <input type="text" placeholder="First name..." />
+                        <input type="text" placeholder="Last name..." />
+                    </div>
+                    <input type="mail" placeholder="Email address..." />
+                    <input type="password" placeholder="Password..." />
+                    <div class="form-register__consent">
+                        <input type="checkbox" /><span class="bottom-span">
+                            I have read the <a href="#">Terms & Conditions</a></span>
+                    </div>
+                </form>
+                <button class="register" type="submit">
+                    <p>Zarejestruj się za darmo</p>
+                </button>
+                <div class="footer">
+                    <span class="bottom-span">Masz już konto? <a href="#">Zaloguj się</a></span>
+                </div>
+            </div>
+            <div class="right-side"></div>
+        </main>
+    </div>
+</body>
+
+</html>
