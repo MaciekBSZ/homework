@@ -115,6 +115,7 @@ function power1(x, y) {
 function twoStrings(firstString, secondString) {
     return `${firstString}${secondString}`
 }
+// Jako dwa złączone stringi zrozumiałem, że maja być po prostu sklejone bez odstępu.
 
 function minutesToSeconds(minutes) {
     return minutes * 60;
