@@ -150,5 +150,5 @@ function age2(year) {
 }
 
 function score(twoPoint, threePoint) {
-    return x * twoPoint + y * threePoint;
+    return 2 * twoPoint + 3 * threePoint;
 }
