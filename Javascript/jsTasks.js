@@ -31,7 +31,7 @@ number = false;
 console.log(number);
 // 7
 function taskAdd() {
-    return 100;
+    return 2 + 2;
 }
 
 function taskString() {
@@ -44,6 +44,10 @@ function taskTrue() {
 
 function taskModulo() {
     return 6 % 4;
+}
+
+function taskPower() {
+    return 3 ** 4;
 }
 
 function taskHello() {
@@ -65,6 +69,8 @@ function taskMultiplyDivide() {
 function taskSubtraction() {
     return 200 - 10;
 }
+
+
 // 8
 const numbers = [1, 2, 3];
 const cars = ['Mercedes', 'Audi', 'Trabant', 'Fiat', 'Wołga'];
