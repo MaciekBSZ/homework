@@ -107,7 +107,7 @@ function loggedInscription(text) {
 // Dodałem pseudo zabezpieczenie, dzięki czemu zawsze wyswietla się napis, czyli string.
 
 function boolean(value) {
-    return Boolean(value);
+    return value;
 }
 
 function modulo(x, y) {
