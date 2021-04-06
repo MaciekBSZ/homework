@@ -107,7 +107,7 @@ function loggedInscription(text) {
 // Dodałem pseudo zabezpieczenie, dzięki czemu zawsze wyswietla się napis, czyli string.
 
 function boolean(value) {
-    return value
+    return Boolean(value);
 }
 
 function modulo(x, y) {
@@ -156,5 +156,5 @@ function age2(year) {
 }
 
 function score(twoPoint, threePoint) {
-    return x * twoPoint + y * threePoint;
+    return 2 * twoPoint + 3 * threePoint;
 }
