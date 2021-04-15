@@ -93,6 +93,71 @@ function modulo(x) {
     } else if (x % 5 === 0) {
         return "Buzz";
     } else {
-        return "Wybierz liczbe podzielną przez 3 lub 5"
+        return "Wybierz liczbe podzielną przez 3 lub 5";
+    }
+}
+
+function canWatchMovie(age, permission) {
+    return age > 15 || permission ? "Możesz obejrzeć film! :)" : "Lepiej idź spać :(";
+}
+
+function yesNo(argument) {
+    return argument ? 'Tak' : "Nie";
+}
+
+function modulo2(x) {
+    if (x % 2 === 0 && x !== 0) {
+        return "Liczba jest parzysta";
+    } else if (x % 2 !== 0 && x !== 0) {
+        return "Liczba jest nieparzysta";
+    } else {
+        return "Podaj liczbe inną niż 0";
+    }
+}
+// 4
+const car = {
+    brand: 'Mercedes',
+    model: 'Eclass',
+    yearOfProduction: 2003,
+    isCabrio: false
+}
+
+function carCheck(object) {
+    const currentYear = (new Date).getFullYear();
+    if (object.yearOfProduction > currentYear) {
+        return 'Nie wyprodukowano tego auta :(';
+    } else {
+        return `Samochód marki ${object.brand}, model ${object.model} wyprodukowano w ${object.yearOfProduction} roku i ${(object.isCabrio ? "jest to kabriolet" : "nie jest to kabriolet")}`;
+    }
+}
+
+const newArr = [1, 2, 3, 5, "blablabla"];
+const emptyArr = [];
+
+function arrayCheck(array) {
+    return array.length > 0 ? `Tablica ma ${array.length} elementów` : 'Tablica jest pusta';
+}
+
+const randomPerson = {
+    name: 'Grzegorz',
+    secondName: 'Brzęczyszczykiewicz',
+    age: 50,
+    likesReadingBooks: true,
+    likesWatchingTV: true,
+    haveTV: true
+}
+const randomBook = {
+    bookName: 'Digital Tower',
+    genre: 'Thriller',
+    pages: 400
+}
+
+function bookPersonCheck(person, book) {
+    if (person.likesReadingBooks) {
+        return `Cześć ${person.name}, polecam Ci przeczytać książkę ${book.bookName} ma tylko ${book.pages} stron i wciąga jak chomik gruszke!`
+    } else if (person.likesReadingBooks === false && person.haveTV) {
+        return 'Idź pooglądać telewizje'
+    } else {
+        return "Nie wiem co Ci zaproponować."
     }
 }
