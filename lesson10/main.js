@@ -106,7 +106,7 @@ function yesNo(argument) {
 }
 
 function modulo2(x) {
-    if (x % 2 === 0 || x === 0) {
+    if (x % 2 === 0) {
         return "Liczba jest parzysta";
     } else {
         return "Liczba jest nieparzysta";
