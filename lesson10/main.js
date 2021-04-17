@@ -106,12 +106,10 @@ function yesNo(argument) {
 }
 
 function modulo2(x) {
-    if (x % 2 === 0 && x !== 0) {
+    if (x % 2 === 0 || x === 0) {
         return "Liczba jest parzysta";
-    } else if (x % 2 !== 0 && x !== 0) {
-        return "Liczba jest nieparzysta";
     } else {
-        return "Podaj liczbe inną niż 0";
+        return "Liczba jest nieparzysta";
     }
 }
 // 4
