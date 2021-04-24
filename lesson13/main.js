@@ -42,7 +42,7 @@ const incrementation = () => {
     console.log(`W tej linijce ${x} z poprzedniego podpunktu zostanie najpierw zwiększone, a dopiero potem "wydrukowane" w console.logu z już powiększoną wartością ${++x}`);
     // A teraz w skrócie :D
     x = 5;
-    console.log(`${x++} zwiększone po wywołaniu, ${x} już zwiększone wywołane, ${++x} zmienna zwiększona i wywołana już po zwiększeniu`);
+    console.log(`${x++} zwiększone po wywołaniu, ${x} już zwiększone wywołane, ${++x} zmienna zwiększona przed wywołaniem i wywołana już po zwiększeniu`);
     // Mati, mam nadzieję, że o to chodziło w tym zadaniu. :D
 }
 // 5
@@ -80,3 +80,13 @@ basket.rzutZaDwa();
 basket.rzutZaDwa();
 basket.rzutZaTrzy();
 basket.stan();
+// 6
+const pralka = {
+    device: 'Pralka',
+    washingMachineName: 'Samsung',
+    howManyFunctions: 55,
+    information() {
+        return `Urządzenie ${this.device}, marki ${this.washingMachineName} posiada ${this.howManyFunctions} funkcji`
+    }
+}
+// 7
