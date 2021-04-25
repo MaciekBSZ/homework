@@ -28,7 +28,7 @@ const des = ({
     model,
     yearOfProduction
 }) => {
-    return `Samochod ${car.carBrand} ${car.model} wyprodukowano w ${car.yearOfProduction} roku`;
+    return `Samochod ${carBrand} ${model} wyprodukowano w ${yearOfProduction} roku`;
 }
 
 // 4
