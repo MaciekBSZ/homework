@@ -43,7 +43,7 @@ const incrementation = () => {
     // A teraz w skrócie :D
     x = 5;
     console.log(`${x++} zwiększone po wywołaniu, ${x} już zwiększone wywołane, ${++x} zmienna zwiększona przed wywołaniem i wywołana już po zwiększeniu`);
-    // Mati, mam nadzieję, że o to chodziło w tym zadaniu. :D
+    // Wiem na czym polega różnica, ale nie jestem pewien czy dobrze wytłumaczyłem. :D
 }
 // 5
 const kosz = () => {
@@ -86,7 +86,21 @@ const pralka = {
     washingMachineName: 'Samsung',
     howManyFunctions: 55,
     information() {
-        return `Urządzenie ${this.device}, marki ${this.washingMachineName} posiada ${this.howManyFunctions} funkcji`
+        return `Urządzenie ${this.device.toLowerCase()}, marki ${this.washingMachineName} posiada ${this.howManyFunctions} funkcji`
     }
 }
 // 7
+// Kopia, czyli kopiujemy wartość z jednej zmiennej do drugiej, ale przy zmianie pierwszej zmiennej nie zmieniamy wartości w skopiowanej zmiennej. Tak wiem, masło maślane. :D Kopiować możemy typy proste np. liczby, stringi.
+
+let x = 1;
+let y = x;
+console.log(`x przed zmianą ${x} y przed zmianą ${y}`);
+x = 2;
+console.log(`x po zmianie ${x} y bez zmian ${y}`);
+// Referencja, czyli wskazujemy miejsce w pamięci komputera w którym zapisany jest dany element, do którego przypisujemy kolejny, lecz podczas edycji pierwotmego elementu, zmieniamy również drugi element. Typy referencyjne to typy złożone np. tablice, obiekty.
+
+const arr = [1, 2, 3, 4];
+const arr2 = arr;
+console.log(`Pierwsza tablica przed zmianą ${arr}, druga tablica przed zmianą ${arr2}`);
+arr.push(5, 6, 7);
+console.log(`Pierwsza tablica po zmianie ${arr}, druga tablica po zmianie ${arr2}`);
