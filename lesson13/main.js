@@ -24,13 +24,13 @@ console.log(car.carBrand);
 console.log(car.model);
 console.log(car.yearOfProduction);
 // 3
-const des = () => {
-    const {
-        carBrand,
-        model,
-        yearOfProduction
-    } = car;
-    return `Samochod ${carBrand} ${model} wyprodukowano w ${yearOfProduction} roku`;
+const des = ({
+    carBrand,
+    model,
+    yearOfProduction
+}) => {
+
+    return `Samochod ${car.carBrand} ${car.model} wyprodukowano w ${car.yearOfProduction} roku`;
 }
 
 // 4
