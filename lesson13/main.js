@@ -18,9 +18,9 @@ const {
     model,
     yearOfProduction
 } = car;
-console.log(car.carBrand);
-console.log(car.model);
-console.log(car.yearOfProduction);
+console.log(carBrand);
+console.log(model);
+console.log(yearOfProduction);
 
 // 3
 const des = ({
