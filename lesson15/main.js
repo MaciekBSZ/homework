@@ -220,19 +220,20 @@ const arrString = ['Lorem', 'Ipsum', 'Dolor', 'Cośtam', 'Ojtam'];
 const arrNumber = [2, 4, 6, 1, 2, 6, 7, 1];
 
 const concatenation = (arr, parameter) => {
+    const check = arr[1];
     if (arr.length === 0) {
         console.log("Pusta tablica!");
     } else {
-        if (parameter === 'string') {
+        if (parameter === 'string' && typeof check === 'string') {
             console.log(arr.join(''));
-        } else if (parameter === 'number') {
+        } else if (parameter === 'number' && typeof check === 'number') {
             let sum = 0;
             for (let i = 0; i < arr.length; i++) {
                 sum += arr[i];
             }
             console.log(`Suma cyfr ${arr.join(", ")} wynosi ${sum}`);
         } else {
-            console.log("Drugi parametr nieprawidłowy");
+            console.log("Parametr/y nieprawidłowy/e");
         }
     }
 }
