@@ -175,12 +175,9 @@ randomElements.forEach(el => {
         console.log(`Wyświetlono ${el}`);
     }
 })
-let newNumberArr = [];
-randomElements.forEach(el => {
-    if (typeof el === 'number') {
-        newNumberArr.push(el);
-    }
-})
+
+const newNuberArr = randomElements.filter(el => typeof el === 'number')
+
 console.log('Zadanie nr. 5');
 
 const arrNum = [5, 10, 15, 24, 7];
@@ -191,15 +188,14 @@ const arrSum = arr => {
     }
     console.log(`Suma wynosi ${sum}`);
 }
-const even = [];
-const odd = [];
+
 const oddEven = arr => {
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i])
-    }
-    console.log(`Tablica nieparzysta ${odd}`);
+    const even = arr.filter(el => el % 2 === 0)
+    const odd = arr.filter(el => el % 2 !== 0)
     console.log(`Tablica parzysta ${even}`);
+    console.log(`Tablica nieparzysta ${odd}`);
 }
+
 
 const randomString = "Rozrewolweryzowany";
 const otherRandomString = "Banana";
