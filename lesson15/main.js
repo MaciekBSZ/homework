@@ -175,8 +175,10 @@ randomElements.forEach(el => {
         console.log(`Wyświetlono ${el}`);
     }
 })
-
-const newNuberArr = randomElements.filter(el => typeof el === 'number')
+const newArr = arr => {
+    const newNuberArr = arr.filter(el => typeof el === 'number')
+    console.log(`Nowa tablica z tablicy ${arr.join(", ")} to ${newNuberArr.join(" ")}`);
+}
 
 console.log('Zadanie nr. 5');
 
@@ -192,8 +194,8 @@ const arrSum = arr => {
 const oddEven = arr => {
     const even = arr.filter(el => el % 2 === 0)
     const odd = arr.filter(el => el % 2 !== 0)
-    console.log(`Tablica parzysta ${even}`);
-    console.log(`Tablica nieparzysta ${odd}`);
+    console.log(`Z tablicy zawierającej ${arr.join(", ")} wybrano elementy parzyste ${even}`);
+    console.log(`Z tablicy zawierającej ${arr.join(", ")} wybranp elementy nieparzyste ${odd}`);
 }
 
 
