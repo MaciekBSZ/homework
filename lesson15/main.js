@@ -218,7 +218,8 @@ const arrString = ['Lorem', 'Ipsum', 'Dolor', 'Cośtam', 'Ojtam'];
 const arrNumber = [2, 4, 6, 1, 2, 6, 7, 1];
 
 const concatenation = (arr, parameter) => {
-    const check = arr[1];
+    const check = arr[0];
+    // Dodałem pseudozabezpieczenie które sprawdza pierwszy element podanej tablicy i na jej podstawie wykonuje dodawanie numberów lub "sklejanie" stringów.
     if (arr.length === 0) {
         console.log("Pusta tablica!");
     } else {
