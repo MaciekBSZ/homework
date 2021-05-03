@@ -279,9 +279,8 @@ const drivingHome = obj => {
         console.log(`${obj[i].name} nie ma prawa jazdy ani samochodu wiec jak ma Cię odwieźć? :/`)
     }
 }
-
-for (i = 0; i < drivers.length; i++) {
-    drivingHome(drivers);
+for (i in drivers) {
+    drivingHome(drivers)
 }
 const anotherNumbersArray = [2, 5, 6, 2, 4];
 const anotherStringArray = ['Jakieś', 'Randomowe', 'Stringi'];
