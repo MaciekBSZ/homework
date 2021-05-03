@@ -202,7 +202,8 @@ const oddEven = arr => {
 const randomString = "Rozrewolweryzowany";
 const otherRandomString = "Banana";
 const containsYOrNot = string => {
-    string.includes('y') || string.includes('Y') ? console.log('Jest Y!') : console.log('nie ma');
+    const regExp = /([yY])/g
+    string.match(regExp) ? console.log('Jest Y!') : console.log('nie ma');
 }
 
 const multiply = number => {
@@ -219,7 +220,7 @@ const arrNumber = [2, 4, 6, 1, 2, 6, 7, 1];
 
 const concatenation = (arr, parameter) => {
     const check = arr[0];
-    // Dodałem pseudozabezpieczenie które sprawdza pierwszy element podanej tablicy i na jej podstawie wykonuje dodawanie numberów lub "sklejanie" stringów.
+    // Dodałem pseudozabezpieczenie które sprawdza pierwszy element podanej tablicy i na jej podstawie wykonuje dodawanie numberów lub "sklejanie" stringa
     if (arr.length === 0) {
         console.log("Pusta tablica!");
     } else {
