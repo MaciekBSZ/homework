@@ -164,17 +164,19 @@ objects.forEach(({
     }) =>
     console.log(`A oto przed Państwem ${color} ${model}!`));
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-numbers.forEach(i => {
-    if (i % 2 === 0) {
-        console.log(`Wyświetlono cyfre ${i}`);
+for (el of numbers) {
+    if (el % 2 === 0) {
+        console.log(`Wyświetlono cyfre ${el}`);
     }
-})
+}
+
 const randomElements = [1, true, 'false', false, 4, 1, 5, 7, 'blablabka', 'randomowy', 'string'];
-randomElements.forEach(el => {
+for (el of randomElements) {
     if (typeof el === 'string') {
         console.log(`Wyświetlono ${el}`);
     }
-})
+}
+
 const newArr = arr => {
     const newNuberArr = arr.filter(el => typeof el === 'number')
     console.log(`Nowa tablica z tablicy ${arr.join(", ")} to ${newNuberArr.join(" ")}`);
