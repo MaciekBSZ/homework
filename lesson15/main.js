@@ -183,10 +183,11 @@ const newArr = arr => {
 console.log('Zadanie nr. 5');
 
 const arrNum = [5, 10, 15, 24, 7];
+
 const arrSum = arr => {
     let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+    for (el in arr) {
+        sum += arr[el]
     }
     console.log(`Suma wynosi ${sum}`);
 }
@@ -228,8 +229,8 @@ const concatenation = (arr, parameter) => {
             console.log(arr.join(''));
         } else if (parameter === 'number' && typeof check === 'number') {
             let sum = 0;
-            for (let i = 0; i < arr.length; i++) {
-                sum += arr[i];
+            for (el in arr) {
+                sum += arr[el]
             }
             console.log(`Suma cyfr ${arr.join(", ")} wynosi ${sum}`);
         } else {
