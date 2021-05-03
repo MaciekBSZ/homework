@@ -178,8 +178,7 @@ for (el of randomElements) {
 }
 
 const newArr = arr => {
-    const newNuberArr = arr.filter(el => typeof el === 'number')
-    console.log(`Nowa tablica z tablicy ${arr.join(", ")} to ${newNuberArr.join(" ")}`);
+    return newNuberArr = arr.filter(el => typeof el === 'number')
 }
 
 console.log('Zadanie nr. 5');
@@ -199,6 +198,7 @@ const oddEven = arr => {
     const odd = arr.filter(el => el % 2 !== 0)
     console.log(`Z tablicy zawierającej ${arr.join(", ")} wybrano elementy parzyste ${even}`);
     console.log(`Z tablicy zawierającej ${arr.join(", ")} wybranp elementy nieparzyste ${odd}`);
+    // Normalnie stworzyłbym dwie puste tablice na zewnątrz i do nich pushował elementy z tej funkcji(wg. mnie miałoby to większy użytek), ale na potrzeby tego przykładu tworze tablice wewnątrz funkcji.
 }
 
 
