@@ -1,3 +1,4 @@
+'use strict'
 const rentalCarCompany = [{
         name: 'audi',
         allCarsNumber: 70,
@@ -64,7 +65,7 @@ const canIRentACarForAWeek = obj => {
     console.log(rentForA3500);
 };
 const mostOfterRent = obj => {
-    rentedMostOften = obj.sort((x, y) => (y.allCarsNumber / y.carsToRent) - (x.allCarsNumber / x.carsToRent)).slice(0, 3);
+    const rentedMostOften = obj.sort((x, y) => (y.allCarsNumber / y.carsToRent) - (x.allCarsNumber / x.carsToRent)).slice(0, 3);
     console.log(rentedMostOften);
 };
 sortedNames(rentalCarCompany);
