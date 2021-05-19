@@ -29,7 +29,7 @@ const someObj = someArray.some(el => {
 const everyObj = someArray.every(el => {
     return el > 2
 })
-// Funkcja some zwraca true, jeśli chociaż JEDEN element z tablicy spełnia warunek, a funkcja every zwraca true, tylko jeśli KAŻDY element spełnia warunek
+// Funkcja some zwraca true, jeśli chociaż JEDEN element z tablicy spełnia warunek, a funkcja every zwraca true tylko, jeśli KAŻDY element spełnia warunek.
 console.log('someObj', someObj, 'everyObj', everyObj);
 
 
@@ -76,7 +76,7 @@ const lookingForANumber = (obj, number) => {
     const someNum = obj.some(el => {
         return el === number
     })
-    return someNum ? true : false
+    return someNum;
 }
 
 function Car(model, yearOfProduction, color) {
