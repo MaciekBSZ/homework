@@ -29,7 +29,7 @@ const someObj = someArray.some(el => {
 const everyObj = someArray.every(el => {
     return el > 2
 })
-
+// Funkcja some zwraca true, jeśli chociaż JEDEN element z tablicy spełnia warunek, a funkcja every zwraca true, tylko jeśli KAŻDY element spełnia warunek
 console.log('someObj', someObj, 'everyObj', everyObj);
 
 
@@ -77,4 +77,24 @@ const lookingForANumber = (obj, number) => {
         return el === number
     })
     return someNum ? true : false
+}
+
+function Car(model, yearOfProduction, color) {
+    this.model = model;
+    this.yearOfProduction = yearOfProduction;
+    this.color = color;
+    this.drive = () =>
+        console.log('WRUM!');
+}
+
+const merol = new Car('E-klasa', 2010, 'srebrny');
+const smieciarka = new Car('Śmieciowóz5000', 2021, 'czarny-mat');
+
+// Słowo "New" tworzy nowy element na podstawie wcześniej zadeklarowanego konstruktora
+
+Car.prototype.tankFuel = function () {
+    console.log(`Samochód ${this.model} wyprodukowany w ${this.yearOfProduction} posiada bak o pojemności 100litrów`);
+}
+Car.prototype.stop = function () {
+    console.log('Czas na tankowanko!');
 }
