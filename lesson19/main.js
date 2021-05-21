@@ -79,26 +79,19 @@ const everyLoop = (obj, condition) => {
 
 const randomArray = [1, 42, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
 
-const arraySum = (obj, initialValue = 0) => {
+const arraySum = (obj, initialValue) => {
     const sumNumArr = obj.filter(el => typeof el === 'number').reduce((acc, el) => {
         return acc + el;
     }, initialValue)
-    if (initialValue === 0) {
-        console.log(`Suma liczb z tablicy ${obj.join(', ')} wynosi ${sumNumArr}`);
-    } else if (initialValue > 0) {
-        console.log(`Suma liczb z tablicy ${obj.join(', ')} powiększona o ${initialValue} wynosi ${sumNumArr}`);
-    } else {
-        console.log('Podaj inną wartość inicjalizującą');
-    }
 }
-const minusFunction = (obj, initialValue = 0) => {
+const minusFunction = (obj, initialValue) => {
     const value = obj.reduce((acc, el) => {
         return acc - el
     }, initialValue);
     console.log(value);
 }
 
-const minusFunction2 = (obj, initialValue = 0) => {
+const minusFunction2 = (obj, initialValue) => {
     obj.reduce((acc, el) => {
         console.log(`Wynik odejmowania cyfr ${el} i ${obj[acc + 1]} wynosi  ${el - obj[acc + 1]}`);
         return acc + 1;
