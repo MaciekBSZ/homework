@@ -129,7 +129,7 @@ const smieciarka = new Car('Śmieciowóz5000', 2021, 'czarny-mat');
 // Słowo "New" tworzy nowy element na podstawie wcześniej zadeklarowanego konstruktora
 
 Car.prototype.tankFuel = function () {
-    console.log(`Czas na tankowanko!`);
+    console.log(`${this.model} potrzebuje tankowanka!`);
 }
 Car.prototype.stop = function () {
     console.log('Gdzie jedziesz?!');
