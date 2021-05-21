@@ -21,7 +21,7 @@ const sumPlus10 = array.reduce((acc, el) => {
 console.log(`Suma liczb ze zbioru liczb ${array.join(', ')} powiększona o 10 wynosi ${sumPlus10}`);
 // Jeśli podamy initialvalue, to stanie się ona accumulatorem, a jeśli nie podamy tej wartosci, to acc będzie pierwszą wartością z tablicy.
 
-// Jeśli podamy initialValue w tablicy, to pierwszy element będzie miał index równy 0.
+// Index zawsze będzie wynosił 0, bez znaczenia czy podamy initialValue, czy nie.
 
 function reduceLoop(reduceFunction, initialValue) {
     let value = initialValue;
