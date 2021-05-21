@@ -63,18 +63,18 @@ modulo7(someArray);
 const someLoop = (obj, condition) => {
     for (let i in obj) {
         if (obj[i] > condition) {
-            return console.log(`W tablicy ${obj} znajduje się element większy niż ${condition}`);
+            return true
         }
     }
-    return console.log(`W tablicy ${obj} nie znajduje się element większy niż ${condition}`);
+    return false
 }
 const everyLoop = (obj, condition) => {
     for (let i in obj) {
-        if (obj[i] < condition) {
-            return console.log(`W tablicy ${obj} nie każdy element jest większy niż ${condition}`);
+        if (obj[i] <= condition) {
+            return true
         }
     }
-    return console.log(`W tablicy ${obj} każdy każdy element jest większy niż ${condition}`);
+    return false
 }
 
 const randomArray = [1, 42, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
@@ -93,10 +93,21 @@ const arraySum = (obj, initialValue = 0) => {
 }
 const minusFunction = (obj, initialValue = 0) => {
     const value = obj.reduce((acc, el) => {
-        return acc -= el;
+        return acc - el
     }, initialValue);
     console.log(value);
 }
+
+const minusFunction2 = (obj, initialValue = 0) => {
+    obj.reduce((acc, el) => {
+        console.log(`Wynik odejmowania cyfr ${el} i ${obj[acc + 1]} wynosi  ${el - obj[acc + 1]}`);
+        return acc + 1;
+        // W ostatnim wywala mi undefined. Wiem czemu, ale nie wiem jak to poprawić. :/
+    }, initialValue);
+}
+
+// Nie wiem, czy dobrze zrozumiałem polecenie, czy ta funkcja miała odejmować po kolei od siebie cyfry, czy każdą poprzednia cyfre od kolejnej, wiec zrobiłęm dwie. :D
+
 const lookingForANumber = (obj, number) => {
     const someNum = obj.some(el => {
         return el === number;
@@ -118,8 +129,8 @@ const smieciarka = new Car('Śmieciowóz5000', 2021, 'czarny-mat');
 // Słowo "New" tworzy nowy element na podstawie wcześniej zadeklarowanego konstruktora
 
 Car.prototype.tankFuel = function () {
-    console.log(`Samochód ${this.model} wyprodukowany w ${this.yearOfProduction} posiada bak o pojemności 100litrów`);
+    console.log(`Czas na tankowanko!`);
 }
 Car.prototype.stop = function () {
-    console.log('Czas na tankowanko!');
+    console.log('Gdzie jedziesz?!');
 }
