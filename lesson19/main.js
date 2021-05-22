@@ -107,5 +107,5 @@ Car.prototype.tankFuel = function () {
     console.log(`${this.model} potrzebuje tankowanka!`);
 }
 Car.prototype.stop = function () {
-    console.log('Gdzie jedziesz?!');
+    console.log('Gdzie jedziesz?! STÓJ!');
 }
