@@ -1,8 +1,7 @@
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+'use strict'
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const sum = array.reduce((acc, el) => {
-    return acc + el;
-})
+const sum = array.reduce((acc, el) => acc + el)
 console.log(`Suma liczb ze zbioru liczb ${array.join(', ')} wynosi ${sum}`);
 
 const even = array.reduce((acc, el) => {
@@ -11,12 +10,10 @@ const even = array.reduce((acc, el) => {
     }
     return acc;
 
-}, 0)
+}, 0);
 console.log(`Suma liczb parzystych z zbioru liczb ${array.join(', ')} wynosi ${even}`);
 
-const sumPlus10 = array.reduce((acc, el) => {
-    return acc + el;
-}, 10)
+const sumPlus10 = array.reduce((acc, el) => acc + el, 10);
 
 console.log(`Suma liczb ze zbioru liczb ${array.join(', ')} powiększona o 10 wynosi ${sumPlus10}`);
 // Jeśli podamy initialvalue, to stanie się ona accumulatorem, a jeśli nie podamy tej wartosci, to acc będzie pierwszą wartością z tablicy.
@@ -39,23 +36,16 @@ console.log(sumArr);
 
 const someArray = [11, 3, 5, 31, 31, 54, 23, 14];
 
+const someObj = someArray.some(el => el > 50);
 
-const someObj = someArray.some(el => {
-    return el > 50;
-});
-
-const everyObj = someArray.every(el => {
-    return el > 2;
-});
+const everyObj = someArray.every(el => el > 2);
 console.log('someObj', someObj, 'everyObj', everyObj);
 
 // Funkcja some zwraca true, jeśli chociaż JEDEN element z tablicy spełnia warunek, a funkcja every zwraca true tylko, jeśli KAŻDY element spełnia warunek.
 
 
 const modulo7 = obj => {
-    const trueFalse = obj.some(el => {
-        return el % 7 === 0 ? true : false;
-    })
+    const trueFalse = obj.some(el => el % 7 === 0)
     trueFalse ? console.log('w tablicy znajduje się element podzielny przez 7! :)') : console.log('w tablicy nie ma elementu podzielnego przez 7 :(');
 }
 modulo7(someArray);
@@ -63,10 +53,10 @@ modulo7(someArray);
 const someLoop = (obj, condition) => {
     for (let i in obj) {
         if (obj[i] > condition) {
-            return true
+            return true;
         }
     }
-    return false
+    return false;
 }
 const everyLoop = (obj, condition) => {
     for (let i in obj) {
@@ -77,18 +67,14 @@ const everyLoop = (obj, condition) => {
     return false
 }
 
-const randomArray = [1, 42, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
+const randomArray = [1, 43, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
 
 const arraySum = (obj, initialValue = 0) => {
-    const sumNumArr = obj.filter(el => typeof el === 'number').reduce((acc, el) => {
-        return acc + el;
-    }, initialValue)
+    const sumNumArr = obj.filter(el => typeof el === 'number').reduce((acc, el) => acc + el, initialValue)
     console.log(sumNumArr);
 }
 const minusFunction = (obj, initialValue = 0) => {
-    const value = obj.reduce((acc, el) => {
-        return acc - el
-    }, initialValue);
+    const value = obj.reduce((acc, el) => acc - el, initialValue);
     console.log(value);
 }
 
@@ -102,12 +88,7 @@ const minusFunction2 = (obj, initialValue = 0) => {
 
 // Nie wiem, czy dobrze zrozumiałem polecenie, czy ta funkcja miała odejmować po kolei od siebie cyfry, czy każdą poprzednia cyfre od kolejnej, wiec zrobiłęm dwie. :D
 
-const lookingForANumber = (obj, number) => {
-    const someNum = obj.some(el => {
-        return el === number;
-    })
-    return someNum;
-}
+const lookingForANumber = (obj, number) => someNum = obj.some(el => el === number)
 
 function Car(model, yearOfProduction, color) {
     this.model = model;
