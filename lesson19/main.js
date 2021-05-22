@@ -79,19 +79,20 @@ const everyLoop = (obj, condition) => {
 
 const randomArray = [1, 42, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
 
-const arraySum = (obj, initialValue) => {
+const arraySum = (obj, initialValue = 0) => {
     const sumNumArr = obj.filter(el => typeof el === 'number').reduce((acc, el) => {
         return acc + el;
     }, initialValue)
+    console.log(sumNumArr);
 }
-const minusFunction = (obj, initialValue) => {
+const minusFunction = (obj, initialValue = 0) => {
     const value = obj.reduce((acc, el) => {
         return acc - el
     }, initialValue);
     console.log(value);
 }
 
-const minusFunction2 = (obj, initialValue) => {
+const minusFunction2 = (obj, initialValue = 0) => {
     obj.reduce((acc, el) => {
         console.log(`Wynik odejmowania cyfr ${el} i ${obj[acc + 1]} wynosi  ${el - obj[acc + 1]}`);
         return acc + 1;
