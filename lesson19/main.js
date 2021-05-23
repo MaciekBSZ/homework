@@ -61,10 +61,10 @@ const someLoop = (obj, condition) => {
 const everyLoop = (obj, condition) => {
     for (let i in obj) {
         if (obj[i] <= condition) {
-            return true
+            return false
         }
     }
-    return false
+    return true
 }
 
 const randomArray = [1, 43, 55, 22, 'bakłażan', 2, 'rododendron', 'musztarda', true, false, false, 24];
