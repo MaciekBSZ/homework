@@ -45,8 +45,7 @@ console.log('someObj', someObj, 'everyObj', everyObj);
 
 
 const modulo7 = obj => {
-    const trueFalse = obj.some(el => el % 7 === 0)
-    trueFalse ? console.log('w tablicy znajduje się element podzielny przez 7! :)') : console.log('w tablicy nie ma elementu podzielnego przez 7 :(');
+    obj.some(el => el % 7 === 0) ? console.log('w tablicy znajduje się element podzielny przez 7! :)') : console.log('w tablicy nie ma elementu podzielnego przez 7 :(');
 }
 modulo7(someArray);
 
