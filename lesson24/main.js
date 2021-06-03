@@ -22,6 +22,8 @@ const cartoonNames = async () => {
         return imiona
     } catch (err) {
         console.log('O nie! I tutaj jakiś babol.', err);
+    } finally {
+        console.log('End!');
     }
 }
 
