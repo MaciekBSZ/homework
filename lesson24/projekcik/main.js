@@ -9,6 +9,7 @@ const main = async () => {
     const createCharactersList = async () => {
         const characters = await characterList()
         characters.results.length = 10
+        // Wiem, że można było zrobić nową tablice przy pomocy filter, albo uciąć slice'm, ale znalazłem szybszy sposób.
         info = characters.info
         console.log(characters);
         const $list = document.getElementById('lista')
@@ -51,7 +52,7 @@ const main = async () => {
     }
     characterList().then((obj) => {
         const $list = document.getElementById('char-number');
-        $list.innerHTML = obj.info.count
+        $list.innerHTML = Math.floor(obj.info.count / 2)
         $allPages.innerHTML = obj.info.pages
     })
 
@@ -61,11 +62,12 @@ const main = async () => {
         const $img = document.createElement('img')
         $img.src = data.image
         $img.alt = `${data.name} avatar`
+        $img.classList = 'card__img'
 
         const $container = document.createElement('div')
-        $container.classList = 'container'
+        $container.classList = 'card__container'
 
-        const $name = document.createElement('h4')
+        const $name = document.createElement('h2')
         $name.innerHTML = data.name
 
         const $species = document.createElement('p')
