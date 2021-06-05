@@ -42,8 +42,9 @@ body {
 
 .nav__button {
   position: relative;
-  padding: 1em;
-  margin: .5em;
+  background-color: transparent;
+  padding: .5em;
+  margin: 1em;
   width: 10vw;
   border-radius: .5em;
   cursor: pointer;
@@ -120,6 +121,7 @@ body {
 .card__img {
   width: 90%;
   z-index: 1;
+  border-radius: .5em;
   -webkit-transition: -webkit-transform .5s, -webkit-box-shadow 1s;
   transition: -webkit-transform .5s, -webkit-box-shadow 1s;
   transition: transform .5s, box-shadow 1s;
