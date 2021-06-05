@@ -1,5 +1,5 @@
 let page = 1
-// let info = null
+let info = null
 
 const main = async () => {
     const $btnNext = document.getElementById('next')
@@ -8,20 +8,17 @@ const main = async () => {
     const $allPages = document.getElementById('all-pages')
     const createCharactersList = async () => {
         const characters = await characterList()
+        characters.results.length = 10
         info = characters.info
+        console.log(characters);
         const $list = document.getElementById('lista')
         $list.innerHTML = ''
         $actualPage.innerText = page
-        // if (page % 2 !== 0) {
-
-        // }
-        // let char = characters.results.slice(0, 10)
-        // let char2 = characters.results.slice(10, 20)
         characters.results.forEach((character) => kartaPostaci(character))
     }
 
 
-    $btnPrev.addEventListener('click', async (el) => {
+    $btnPrev.addEventListener('click', async () => {
         if (info.prev === null) {
             $btnPrev.textContent = "Jesteś na pierwszej stronie"
             return
@@ -32,7 +29,7 @@ const main = async () => {
         page--
         createCharactersList()
     })
-    $btnNext.addEventListener('click', async (el) => {
+    $btnNext.addEventListener('click', async () => {
         if (info.next === null) {
             $btnNext.innerHTML = "Jesteś na ostatniej stronie"
             return
@@ -44,10 +41,13 @@ const main = async () => {
         createCharactersList()
     })
     async function characterList() {
-        const data = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
-        const json = await data.json()
-        console.log(json);
-        return json
+        try {
+            const data = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
+            const json = await data.json()
+            return json
+        } catch (err) {
+            alert(new Error(err));
+        }
     }
     characterList().then((obj) => {
         const $list = document.getElementById('char-number');
@@ -61,7 +61,6 @@ const main = async () => {
         const $img = document.createElement('img')
         $img.src = data.image
         $img.alt = `${data.name} avatar`
-        $card.appendChild($img)
 
         const $container = document.createElement('div')
         $container.classList = 'container'
@@ -72,12 +71,12 @@ const main = async () => {
         const $species = document.createElement('p')
         $species.innerHTML = data.species
 
+        $card.appendChild($img)
         $container.appendChild($name)
         $container.appendChild($species)
         $card.appendChild($container)
         document.getElementById('lista').appendChild($card)
     }
     createCharactersList()
-    pageCounter()
 }
 main()
