@@ -1,7 +1,6 @@
-let page = 1
-let info = null
-
 const main = async () => {
+    let page = 1
+    let info = null
     const $btnNext = document.getElementById('next')
     const $btnPrev = document.getElementById('prev')
     const $actualPage = document.getElementById('actual-page')
@@ -9,9 +8,8 @@ const main = async () => {
     const createCharactersList = async () => {
         const characters = await characterList()
         characters.results.length = 10
-        // Wiem, że można było zrobić nową tablice przy pomocy filter, albo uciąć slice'm, ale znalazłem szybszy sposób.
+        // Wiem, że można było zrobić nową tablice przy pomocy filter, albo uciąć slice'm, ale znalazłem szybszy sposób na wyświetlenie 10 postaci jednocześnie.
         info = characters.info
-        console.log(characters);
         const $list = document.getElementById('lista')
         $list.innerHTML = ''
         $actualPage.innerText = page
@@ -52,7 +50,7 @@ const main = async () => {
     }
     characterList().then((obj) => {
         const $list = document.getElementById('char-number');
-        $list.innerHTML = Math.floor(obj.info.count / 2)
+        $list.innerHTML = obj.info.count
         $allPages.innerHTML = obj.info.pages
     })
 

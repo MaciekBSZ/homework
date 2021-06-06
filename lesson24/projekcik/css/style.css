@@ -105,7 +105,6 @@ body {
           justify-content: center;
   border-radius: .5em;
   width: 16%;
-  height: 45%;
   padding: 1em 0;
   background-color: wheat;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -116,6 +115,13 @@ body {
   transition: -webkit-box-shadow 1s, -webkit-transform 0.3s;
   transition: box-shadow 1s, transform 0.3s;
   transition: box-shadow 1s, transform 0.3s, -webkit-box-shadow 1s, -webkit-transform 0.3s;
+}
+
+.card:hover {
+  -webkit-box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card__img {
@@ -138,12 +144,5 @@ body {
 .card__container h2 {
   margin-top: 2em;
   font-weight: bold;
-}
-
-.card:hover {
-  -webkit-box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
