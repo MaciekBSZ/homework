@@ -7,8 +7,8 @@ const main = async () => {
     const $allPages = document.getElementById('all-pages')
     const createCharactersList = async () => {
         const characters = await characterList()
-        characters.results.length = 10
-        // Wiem, że można było zrobić nową tablice przy pomocy filter, albo uciąć slice'm, ale znalazłem szybszy sposób na wyświetlenie 10 postaci jednocześnie.
+        // characters.results.length = 10
+        // jeśli odkomentujesz linijke wyżej, to wyświetli 10 kart postaci. ;)
         info = characters.info
         const $list = document.getElementById('lista')
         $list.innerHTML = ''

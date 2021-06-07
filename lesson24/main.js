@@ -1,4 +1,6 @@
 'use strict'
+// Kod asynchroniczny to taki, który może wykonywać się równocześnie z innym kodem na równocześnie i nie wstrzymuje wykonywania się programu. Innymi słowy - możemy cieszyć się niezaburzonym działaniem naszej aplikacji podczas np. pobierania plików z serwera, a skrypt może w tym czasie wykonać inne rzeczy, nie czekając aż te pliki się pobiorą i wykonać operacje na tych danych dopiero po pobraniu ich. Dobra, znowu wiem o co chodzi, ale nie mam weny do pisania regułek, sory. :/
+
 fetch('https://rickandmortyapi.com/api/character/')
     .then(res => res.json())
     .then(res => {
