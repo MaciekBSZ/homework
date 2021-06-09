@@ -77,7 +77,7 @@ const main = async () => {
         $container.appendChild($name)
         $container.appendChild($species)
         $card.appendChild($container)
-        document.getElementById('lista').appendChild($card)
+        $list.appendChild($card)
     }
     createCharactersList()
 }
