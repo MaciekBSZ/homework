@@ -1,34 +1,36 @@
+'use strict'
+let page = 1
+let info = null
+const $btnNext = document.getElementById('next')
+const $btnPrev = document.getElementById('prev')
+const $actualPage = document.getElementById('actual-page')
+const $allPages = document.getElementById('all-pages')
+const $list = document.getElementById('lista')
+
 const main = async () => {
-    let page = 1
-    let info = null
-    const $btnNext = document.getElementById('next')
-    const $btnPrev = document.getElementById('prev')
-    const $actualPage = document.getElementById('actual-page')
-    const $allPages = document.getElementById('all-pages')
     const createCharactersList = async () => {
         const characters = await characterList()
         // characters.results.length = 10
         // jeśli odkomentujesz linijke wyżej, to wyświetli 10 kart postaci. ;)
         info = characters.info
-        const $list = document.getElementById('lista')
         $list.innerHTML = ''
         $actualPage.innerText = page
         characters.results.forEach((character) => kartaPostaci(character))
     }
 
 
-    $btnPrev.addEventListener('click', async () => {
+    $btnPrev.addEventListener('click', () => {
         if (info.prev === null) {
             $btnPrev.textContent = "Jesteś na pierwszej stronie"
             return
         }
-        if (info.next !== null) {
+        if (info.next !== info.pages) {
             $btnNext.innerHTML = "Następna strona"
         }
         page--
         createCharactersList()
     })
-    $btnNext.addEventListener('click', async () => {
+    $btnNext.addEventListener('click', () => {
         if (info.next === null) {
             $btnNext.innerHTML = "Jesteś na ostatniej stronie"
             return
