@@ -25,18 +25,18 @@ const main = async () => {
             return
         }
         if (info.next !== info.pages) {
-            $btnNext.innerHTML = "Następna strona"
+            $btnNext.textContent = "Następna strona"
         }
         page--
         createCharactersList()
     })
     $btnNext.addEventListener('click', () => {
         if (info.next === null) {
-            $btnNext.innerHTML = "Jesteś na ostatniej stronie"
+            $btnNext.textContent = "Jesteś na ostatniej stronie"
             return
         }
         if (page > 0) {
-            $btnPrev.innerHTML = "Poprzednia strona"
+            $btnPrev.textContent = "Poprzednia strona"
         }
         page++
         createCharactersList()
