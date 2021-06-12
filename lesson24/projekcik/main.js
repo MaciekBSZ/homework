@@ -18,19 +18,7 @@ const main = async () => {
         characters.results.forEach((character) => kartaPostaci(character))
     }
 
-
-    $btnPrev.addEventListener('click', () => {
-        if (info.prev === null) {
-            $btnPrev.textContent = "Jesteś na pierwszej stronie"
-            return
-        }
-        if (info.next !== info.pages) {
-            $btnNext.textContent = "Następna strona"
-        }
-        page--
-        createCharactersList()
-    })
-    $btnNext.addEventListener('click', () => {
+    const nextPage = () => {
         if (info.next === null) {
             $btnNext.textContent = "Jesteś na ostatniej stronie"
             return
@@ -40,6 +28,30 @@ const main = async () => {
         }
         page++
         createCharactersList()
+    }
+    const previousPage = () => {
+        if (info.prev === null) {
+            $btnPrev.textContent = "Jesteś na pierwszej stronie"
+            return
+        }
+        if (info.next !== info.pages) {
+            $btnNext.textContent = "Następna strona"
+        }
+        page--
+        createCharactersList()
+    }
+    $btnPrev.addEventListener('click', () => {
+        previousPage();
+    })
+    $btnNext.addEventListener('click', () => {
+        nextPage()
+    })
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'ArrowRight') {
+            nextPage();
+        } else if (e.key === 'ArrowLeft') {
+            previousPage();
+        }
     })
     async function characterList() {
         try {
