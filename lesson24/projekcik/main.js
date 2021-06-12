@@ -1,21 +1,21 @@
 'use strict'
-let page = 1
-let info = null
-const $btnNext = document.getElementById('next')
-const $btnPrev = document.getElementById('prev')
-const $actualPage = document.getElementById('actual-page')
-const $allPages = document.getElementById('all-pages')
-const $list = document.getElementById('lista')
+let page = 1;
+let info = null;
+const $btnNext = document.getElementById('next');
+const $btnPrev = document.getElementById('prev');
+const $actualPage = document.getElementById('actual-page');
+const $allPages = document.getElementById('all-pages');
+const $list = document.getElementById('lista');
 
 const main = async () => {
     const createCharactersList = async () => {
-        const characters = await characterList()
+        const characters = await characterList();
         // characters.results.length = 10
         // jeśli odkomentujesz linijke wyżej, to wyświetli 10 kart postaci. ;)
-        info = characters.info
-        $list.innerHTML = ''
-        $actualPage.innerText = page
-        characters.results.forEach((character) => kartaPostaci(character))
+        info = characters.info;
+        $list.innerHTML = '';
+        $actualPage.innerText = page;
+        characters.results.forEach((character) => kartaPostaci(character));
     }
 
     const nextPage = () => {
@@ -27,7 +27,7 @@ const main = async () => {
             $btnPrev.textContent = "Poprzednia strona"
         }
         page++
-        createCharactersList()
+        createCharactersList();
     }
     const previousPage = () => {
         if (info.prev === null) {
@@ -38,13 +38,13 @@ const main = async () => {
             $btnNext.textContent = "Następna strona"
         }
         page--
-        createCharactersList()
+        createCharactersList();
     }
     $btnPrev.addEventListener('click', () => {
         previousPage();
     })
     $btnNext.addEventListener('click', () => {
-        nextPage()
+        nextPage();
     })
     document.addEventListener('keyup', function (e) {
         if (e.key === 'ArrowRight') {
@@ -55,42 +55,42 @@ const main = async () => {
     })
     async function characterList() {
         try {
-            const data = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
-            const json = await data.json()
-            return json
+            const data = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
+            const json = await data.json();
+            return json;
         } catch (err) {
             alert(new Error(err));
         }
     }
     characterList().then((obj) => {
         const $list = document.getElementById('char-number');
-        $list.innerHTML = obj.info.count
-        $allPages.innerHTML = obj.info.pages
+        $list.innerHTML = obj.info.count;
+        $allPages.innerHTML = obj.info.pages;
     })
 
     function kartaPostaci(data) {
-        const $card = document.createElement('div')
-        $card.classList = 'card'
-        const $img = document.createElement('img')
-        $img.src = data.image
-        $img.alt = `${data.name} avatar`
-        $img.classList = 'card__img'
+        const $card = document.createElement('div');
+        $card.classList = 'card';
+        const $img = document.createElement('img');
+        $img.src = data.image;
+        $img.alt = `${data.name} avatar`;
+        $img.classList = 'card__img';
 
-        const $container = document.createElement('div')
-        $container.classList = 'card__container'
+        const $container = document.createElement('div');
+        $container.classList = 'card__container';
 
-        const $name = document.createElement('h2')
-        $name.innerHTML = data.name
+        const $name = document.createElement('h2');
+        $name.innerHTML = data.name;
 
-        const $species = document.createElement('p')
-        $species.innerHTML = data.species
+        const $species = document.createElement('p');
+        $species.innerHTML = data.species;
 
-        $card.appendChild($img)
-        $container.appendChild($name)
-        $container.appendChild($species)
-        $card.appendChild($container)
-        $list.appendChild($card)
+        $card.appendChild($img);
+        $container.appendChild($name);
+        $container.appendChild($species);
+        $card.appendChild($container);
+        $list.appendChild($card);
     }
-    createCharactersList()
+    createCharactersList();
 }
-main()
+main();
