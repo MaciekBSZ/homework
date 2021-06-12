@@ -46,7 +46,7 @@ const main = async () => {
     $btnNext.addEventListener('click', () => {
         nextPage();
     })
-    document.addEventListener('keyup', function (e) {
+    document.addEventListener('keyup', e => {
         if (e.key === 'ArrowRight') {
             nextPage();
         } else if (e.key === 'ArrowLeft') {
