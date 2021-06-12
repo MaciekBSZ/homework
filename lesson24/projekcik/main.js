@@ -3,6 +3,7 @@ let page = 1;
 let info = null;
 const $btnNext = document.getElementById('next');
 const $btnPrev = document.getElementById('prev');
+const $nav = document.querySelector('.nav')
 const $actualPage = document.getElementById('actual-page');
 const $allPages = document.getElementById('all-pages');
 const $list = document.getElementById('lista');
@@ -40,12 +41,20 @@ const main = async () => {
         page--
         createCharactersList();
     }
-    $btnPrev.addEventListener('click', () => {
-        previousPage();
+    $nav.addEventListener('click', e => {
+        if (e.target === $btnNext) {
+            nextPage();
+        } else if (e.target === $btnPrev) {
+            previousPage();
+        }
     })
-    $btnNext.addEventListener('click', () => {
-        nextPage();
-    })
+    // $btnPrev.addEventListener('click', () => {
+    //     previousPage();
+    // })
+    // $btnNext.addEventListener('click', () => {
+    //     nextPage();
+    // })
+    // Dodałem funkcję przewijania stron poprzez naciśnięcie strzałek lewo/prawo przy pomocy "e" i rozkminiłem, że można w ten sposób również zrobić przewijanie przy pomocy kliknięcią i dzięki temu, mam jedno nasłuchiwanie na event, zamiastw dwóch. Ale nie wiem, czy to nie przerost formy nad treścią, więc daj znać w feedbacku co o tym sądzisz. ;]
     document.addEventListener('keyup', e => {
         if (e.key === 'ArrowRight') {
             nextPage();
