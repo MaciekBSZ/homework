@@ -85,7 +85,7 @@ const minusFunction2 = (obj, initialValue = 0) => {
 }
 
 // Nie wiem, czy dobrze zrozumiałem polecenie, czy ta funkcja miała odejmować po kolei od siebie cyfry, czy każdą poprzednia cyfre od kolejnej, wiec zrobiłęm dwie. :D
-
+// cosś tam
 const lookingForAValue = (obj, value) => obj.some(el => el === value)
 
 function Car(model, yearOfProduction, color) {
